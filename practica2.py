@@ -48,32 +48,37 @@ print(cuenta.titular)
 
 
 
+       # 3. Herencia  --> Una clase puede heredar ATRIBUTOS y METODOS de otras CLASE
+          # Esto permite la reutilización del codigo :)
 
 
+print("Ej. Herencia")
+class Animal:
+    def __init__(self, nombre):
+        self.nombre = nombre
 
+    def hablar(self):
+        print("El animal hace un sonido")
 
+class Perro(Animal):
+    def hablar(self):
+        print(f"{self.nombre} dice ¡Guau!")
 
+class Gato(Animal):
+    def hablar(self):
+        print(f"{self.nombre} dice !Miaw¡")
 
+class Cangrejo(Animal):
+    pass
 
+p = Perro("Fido")
+p.hablar()
 
+g = Gato("Michisin")
+g.hablar()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+cg = Cangrejo("Don Cangrejo")
+cg.hablar()
 
 
 
