@@ -21,6 +21,37 @@ cafetera = Cafetera()
 cafetera.preparar_cafe()
 
 
+       # 2. Encapsulamiento  --> Ocultar datos internos, protege estado del objeto.
+       # _atributo:  atributo protegido
+       # __atributo: nombre manipulado (name mangling), atributo super protegido
+       # Tambien se pueden encapsular los metodos, con _ o con __
+
+print("Ej. Encapsulamiento")
+class CuentaBancaria:
+    def __init__(self, titular, saldo):
+        self.titular = titular
+        self._saldo = saldo # encapsulamiento
+
+    def depositar(self, cantidad):
+        if cantidad > 0:
+            self._saldo += cantidad
+
+    def obtener_saldo(self):
+        return self._saldo
+
+cuenta = CuentaBancaria("Juan", 1200)
+print(cuenta.obtener_saldo())
+cuenta.depositar(500)
+print(cuenta.obtener_saldo())
+print(cuenta._saldo)
+print(cuenta.titular)
+
+
+
+
+
+
+
 
 
 
