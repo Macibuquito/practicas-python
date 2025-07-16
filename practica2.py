@@ -81,6 +81,23 @@ cg = Cangrejo("Don Cangrejo")
 cg.hablar()
 
 
+       #4. Polimorfismo  --> mismo metodo, diferentes objetos, comportamiento distintos
+
+class Gato:
+    def hablar(self):
+        print("Miaw")
+
+
+class Perro:
+    def hablar(self):
+        print("Guau")
+
+# Polimorfismo
+animales = [Gato(), Perro()]
+for animal in animales:
+    animal.hablar()
+    
+            
 
 
 
